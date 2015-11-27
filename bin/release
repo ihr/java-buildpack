@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
-build_dir=$1
+port=$PORT
 
 cat << EOF
 
@@ -9,7 +9,7 @@ addons: []
 config_vars: []
 default_process_types:
   web: java -jar sonar-application-5.2.jar \
-  -Dsonar.web.port="$PORT" \
+  -Dsonar.web.port=$PORT \
   -Dsonar.log.console=true \
   -Dsonar.jdbc.username="sonar" \
   -Dsonar.jdbc.password="sonar" \
