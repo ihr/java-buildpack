@@ -21,10 +21,8 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
 build_dir = ARGV[0]
 
-install_sonarqube
-
-private
-
 def install_sonarqube
   puts "Installing SonarQube"
 end
+
+install_sonarqube
