@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 export JBP_LOG_LEVEL=DEBUG
 
 cat <<EOF
