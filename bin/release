@@ -4,8 +4,6 @@ set -e
 
 export JBP_LOG_LEVEL=DEBUG
 
-echo "Starting app on port " $PORT
-
 cat <<EOF
 ---
 default_process_types:
