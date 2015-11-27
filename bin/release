@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
-port=$PORT
+export_port() {
+  #echo "Pulling ROOT_URL from VCAP_APPLICATION"
+  port=`echo $PORT`
+  export port="$DOMAIN"
+  echo "Port: $port"
+}
+
+export_port
 
 cat << EOF
-
-addons: []
-config_vars: []
+---
 default_process_types:
   web: java -jar sonar-application-5.2.jar \
   -Dsonar.web.port=$port \
