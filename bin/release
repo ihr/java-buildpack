@@ -5,10 +5,6 @@ build_dir=$1
 
 cat << EOF
 
-if [ "${1:0:1}" != '-' ]; then
-	exec "$@"
-fi
-
 addons: []
 config_vars: []
 default_process_types:
@@ -18,6 +14,5 @@ default_process_types:
   -Dsonar.jdbc.username="sonar" \
   -Dsonar.jdbc.password="sonar" \
   -Dsonar.jdbc.url="jdbc:h2:mem:" \
-  -Dsonar.web.javaAdditionalOpts="-Djava.security.egd=file:/dev/./urandom" \
-  	"$@"
+  -Dsonar.web.javaAdditionalOpts="-Djava.security.egd=file:/dev/./urandom"
 EOF
