@@ -9,7 +9,7 @@ addons: []
 config_vars: []
 default_process_types:
   web: java -jar sonar-application-5.2.jar \
-  -Dsonar.web.port=$PORT \
+  -Dsonar.web.port=$port \
   -Dsonar.log.console=true \
   -Dsonar.jdbc.username="sonar" \
   -Dsonar.jdbc.password="sonar" \
