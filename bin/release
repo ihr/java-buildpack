@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export JBP_LOG_LEVEL=DEBUG
+
 cat <<EOF
 ---
 default_process_types:
