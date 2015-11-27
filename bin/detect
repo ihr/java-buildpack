@@ -19,10 +19,10 @@ $stdout.sync = true
 $stderr.sync = true
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
-sonarqube_path = File.join ARGV[0], "sonar-application-5.2.jar"
+sonarqube_path = File.join ARGV[0], ".sonar-application-5.2.jar"
 
 
-if File.exist?(sonarqube_path)
+if File.exist?(".sonar-application-5.2.jar")
   puts "SonarQube detected!"
   exit 0
 else
